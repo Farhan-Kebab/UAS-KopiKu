@@ -7,4 +7,5 @@ use App\Http\Controllers\PostController;
 //     return view('welcome');
 // });
 
-Route::redirect('/', '/admin/login');
+Route::get('/', [PostController::class,
+    'index'])->name('filamentblog.home');
